@@ -4,7 +4,7 @@ Before pulling down, make sure you have node installed. After pulling down you m
 * https://github.com/nodejs/node-v0.x-archive/wiki/Installing-Node.js-via-package-manager
 
 ### Required modules ###
-* grunt (task runner): npm install grunt-cli -g
+* grunt (task runner): "npm install grunt-cli -g" and "npm install grunt"
 * jshint (linter): 
 
 ### Debugging ###
