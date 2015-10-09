@@ -6,6 +6,7 @@ Before pulling down, make sure you have node installed. After pulling down you m
 ### Required modules ###
 * grunt (task runner): "npm install grunt-cli -g" and "npm install grunt"
 * jshint (linter): "npm install grunt-contrib-jshint"
+* Watch (watches for code changes): "npm install grunt-contrib-watch"
 
 ### Debugging ###
 to run this project locally, navigate to the project folder in the terminal and execute "DEBUG=bradslist-web:* ./bin/www"
