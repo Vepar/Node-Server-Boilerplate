@@ -10,6 +10,7 @@ Before pulling down, make sure you have npm installed. After pulling down you ma
 * Watch (watches for code changes): "npm install grunt-contrib-watch"
       To run: "grunt watch"
 * Sequelize (MySQL ORM): "npm install sequelize"
+* MySQL (MySQL Driver): "npm install mysql"
 
    
 
