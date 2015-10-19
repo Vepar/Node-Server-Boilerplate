@@ -11,6 +11,7 @@ Before pulling down, make sure you have npm installed. After pulling down you ma
       To run: "grunt watch"
 * Sequelize (MySQL ORM): "npm install sequelize"
 * MySQL (MySQL Driver): "npm install mysql"
+*node-config (configuration manager): "npm install config"
 
    
 
