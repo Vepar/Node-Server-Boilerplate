@@ -12,7 +12,10 @@
     "ejs": "~2.3.1",
     "express": "~4.12.2",
     "morgan": "~1.5.1",
-    "serve-favicon": "~2.2.0"
+    "serve-favicon": "~2.2.0",
+    "mysql": "~2.9.0",
+    "sequelize": "~3.12.2",
+    "config":"~1.10.0"
   },
   "devDependencies" : {
     "grunt" : "*",

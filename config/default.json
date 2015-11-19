@@ -1,0 +1,6 @@
+{
+  "PhotosPerPost": "7",
+  "dbName": "BL_DEV_DBNAME",
+  "dbUsername": "BL_DEV_DBUSERNAME",
+  "dbPassphrase": "BL_DEV_MySQLPassphrase"
+}

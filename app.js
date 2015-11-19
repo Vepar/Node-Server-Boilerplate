@@ -4,15 +4,22 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var seq = require('sequelize');
+var config = require('config');
+//Change this EV when deploying to different environments
+// process.env.NODE_ENV = {production, dev, ..etc.};
 
 var app = express();
 
 // view engine setup
+//TODO: may not need this??
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+//create singleton for sequelize models (avoids having multiple db connections)
+app.set('models', require('./models'));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
