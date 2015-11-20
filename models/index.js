@@ -12,18 +12,31 @@ var sequelize = new Sequelize(
 
 //load models
 var models = [
-  'User'
-  // ,'Post'
+  'User',
+  'Ad',
+  'Market',
+  'Category',
+  'AdImage'
 ];
 models.forEach(function(model){
-  module.exports[model] = sequelize.import('./models/' + model);
+  module.exports[model] = sequelize.import(model);
+
 });
 
 
 //create relationships
 (function(m){
-  // m.Post.belongsTo(m.User);
-  // m.User.hasMany(m.Post);
+   //m.Ad.belongsTo(m.User, {foreignKey: 'UserId'});
+   m.Ad.belongsTo(m.User);
+
+   m.User.hasMany(m.Ad, {foreignKey: 'UserId'});
+   m.Ad.hasOne(m.Category, {foreignKey: 'CategoryId'});
+   m.Ad.hasOne(m.Market, {foreignKey: 'MarketId'});
+   m.Market.belongsToMany(m.Ad, {through: 'AdMarket'});
+   m.Category.belongsToMany(m.Ad, {through: 'AdCategory'});
+   m.Ad.hasMany(m.AdImage, {foreignKey: 'AdImageId'});
+   m.AdImage.belongsTo(m.Ad, {foreignKey: 'AdId'});
+
 })(module.exports);
 
 module.exports.sequelize = sequelize;

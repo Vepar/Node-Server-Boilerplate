@@ -1,47 +1,50 @@
-var User = sequelize.define('User', {
-  UserId: {
-    type: Sequelize.INTEGER,
-    allowNull: false
-  },
-  Username: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  FirstName: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  LastName: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  Email: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  LastAccess: {
-    type: Sequelize.DATE,
-    allowNull:false,
-    defaultValue: Date.now()
-  },
-  LastLogin: {
-    type: Sequelize.DATE,
-    allowNull:false,
-    defaultValue: Date.now()
-  },
-  SessionToken: {
-    type: Sequelize.STRING(1234),
-    allowNull:false
-  },
-  CreatedAt: {
-    type: Sequelize.DATE,
-    allowNull:false,
-    defaultValue: Date.now()
-  },
-  UpdatedAt: {
-    type: Sequelize.DATE,
-    allowNull: true
-  }
-});
-
-module.exports = User;
+module.exports = function(sequelize, DataTypes) {
+  return sequelize.define('User', {
+    UserId: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false
+    },
+    Username: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    FirstName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    LastName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    Email: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    LastAccess: {
+      type: DataTypes.DATE,
+      allowNull:false,
+      defaultValue: Date.now()
+    },
+    LastLogin: {
+      type: DataTypes.DATE,
+      allowNull:false,
+      defaultValue: Date.now()
+    },
+    SessionToken: {
+      type: DataTypes.STRING(1234),
+      allowNull:false
+    },
+    CreatedAt: {
+      type: DataTypes.DATE,
+      allowNull:false,
+      defaultValue: Date.now()
+    },
+    UpdatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    }
+  });
+};
+//module.exports = User;
